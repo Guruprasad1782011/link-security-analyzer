@@ -1,40 +1,33 @@
-# 🔍 Link Security Analyzer
+# 🔍 Link Security Analyzer - Advanced Edition
 
-An **ethical** Python tool that analyzes websites for common security misconfigurations and issues.
+A powerful **ethical** Python tool that analyzes websites for common security misconfigurations.
 
-> ⚠️ **Important**: This tool is intended **only** for websites you own or have explicit permission to test. Unauthorized scanning is illegal and unethical.
+> ⚠️ **Important**: Only use on websites you own or have explicit permission to test.
 
 ---
 
 ## 🎯 What it checks
 
-| Check | Description |
-|-------|-------------|
-| **Security Headers** | Missing or weak HTTP security headers (CSP, HSTS, X-Frame-Options, etc.) |
-| **SSL/TLS** | Certificate validity, protocol version |
-| **Redirects** | Open redirects and suspicious redirect chains |
-| **HTTPS Enforcement** | Whether the site forces HTTPS |
-| **Server Information** | Exposed server banners |
-| **Basic Fingerprinting** | Technology detection (safe level) |
+| Check | Details |
+|-------|--------|
+| **SSL/TLS** | Certificate validity, expiry, protocol, cipher |
+| **Security Headers** | HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-XSS-Protection |
+| **Cookies** | HttpOnly, Secure, SameSite flags |
+| **HTTPS Enforcement** | Whether HTTP redirects to HTTPS |
+| **Server Info** | Exposed Server / X-Powered-By headers |
+| **Redirects** | Redirect chain analysis |
+| **Overall Score** | 0-100 security rating |
 
 ---
 
 ## 🚀 Features
 
-- Clean and readable reports
-- Easy to extend with new checks
-- Designed for learning and authorized security assessments
-- Clear educational purpose
-
----
-
-## 💻 Tech Stack
-
-- **Python 3**
-- `requests`
-- `urllib3`
-- `ssl`
-- `socket`
+- Clean professional output
+- Overall security score with rating
+- Detailed explanations for missing headers
+- Cookie security checks
+- Certificate expiry warning
+- Lightweight and fast
 
 ---
 
@@ -54,51 +47,25 @@ pip install -r requirements.txt
 python analyzer.py https://example.com
 ```
 
-Example output will show:
-- Present / Missing security headers
-- SSL certificate status
-- Redirect behavior
-- Recommendations
-
 ---
 
 ## 📁 Project Structure
 
 ```
 link-security-analyzer/
-├── analyzer.py          # Main analysis script
-├── requirements.txt     # Dependencies
-├── README.md            # Documentation
+├── analyzer.py          # Advanced analyzer
+├── requirements.txt
+├── README.md
 └── .gitignore
 ```
 
 ---
 
-## 📚 Learning Goals
-
-This project helps you understand:
-- HTTP security headers and why they matter
-- How SSL/TLS certificates work
-- Safe reconnaissance techniques
-- Writing clean security tools in Python
-
----
-
-## ⚠️ Disclaimer
-
-This tool is for **educational and authorized testing purposes only**.
-
-- Only scan websites you own or have written permission to test.
-- The author is not responsible for any misuse of this tool.
-- Always follow responsible disclosure practices.
-
----
-
 ## 🔗 Related Projects
 
-- [protection-from-](https://github.com/Guruprasad1782011/protection-from-) → Phishing email detector
-- [security-learning-path](https://github.com/Guruprasad1782011/security-learning-path) → My learning roadmap
+- [protection-from-](https://github.com/Guruprasad1782011/protection-from-) — Phishing email detector
+- [security-learning-path](https://github.com/Guruprasad1782011/security-learning-path) — Learning roadmap
 
 ---
 
-**Made for learning ethical security practices** ✨
+**Made for learning ethical security practices.**
